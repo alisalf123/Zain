@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zain Web</title>
+    <style>
+        /* Embedded CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 0;
+        }
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        input, textarea {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zain Web</h1>
+    </header>
+    <div class="container">
+        <h2>Hello!</h2>
+        <p>If you want to make any website for your work, email me using the form below:</p>
+        <form id="contactForm">
+            <label for="email">Write your email here:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+            
+            <label for="subject">What work is this for (e.g., business):</label>
+            <textarea id="subject" name="subject" placeholder="Write about your work" required></textarea>
+            
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2025 Zain Web. All rights reserved.
+    </footer>
+
+    <script>
+        // Embedded JavaScript
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+
+            if (email && subject) {
+                alert(`Thank you! Your email: ${email} and subject: "${subject}" will be sent.`);
+            } else {
+                alert('Please fill out all fields.');
+            }
+        });
+    </script>
+</body>
+</html>
